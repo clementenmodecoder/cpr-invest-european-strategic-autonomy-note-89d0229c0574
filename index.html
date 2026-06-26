@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPR Invest - European Strategic Autonomy | Note de référence interne</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="logobox"><img src="cpram-logo.jpg" alt="CPRAM"></span></a>
+    <nav>
+      <a href="index.html" class="active">Le fonds</a>
+      <a href="theme.html">Le thème</a>
+      <a href="enjeux.html">Enjeux &amp; catalyseurs</a>
+      <a href="strategie.html">Stratégie &amp; processus</a>
+      <a href="portefeuille.html">Portefeuille &amp; performance</a>
+      <a href="concurrence.html">Concurrence</a>
+    </nav>
+    <span class="badge-int">Usage interne</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Note de référence pour l'équipe commerciale</div>
+    <h1>CPR Invest - European Strategic Autonomy</h1>
+    <p class="lead">Support de maîtrise du fonds à l'usage de l'équipe commerciale&nbsp;: thème de l'autonomie stratégique européenne, processus de gestion, composition, performance et lecture événementielle du parcours de la valeur liquidative. L'ensemble du contenu est issu des supports officiels CPRAM (pitchbook, reporting mensuel, DIC PRIIPs, infographie, communication du gérant). Chaque mouvement notable de la VL est rattaché à un fait documenté et sourcé.</p>
+    <div class="meta">
+      <span>Part&nbsp;: <b>I EUR (Acc.)</b></span>
+      <span>ISIN&nbsp;: <b>LU2570611249</b></span>
+      <span>Indice&nbsp;: <b>MSCI EMU Net Return</b></span>
+      <span>Gérants&nbsp;: <b>D. Mariette &amp; E. Labbé</b></span>
+      <span>SFDR&nbsp;: <b>Article 8</b></span>
+      <span>Éligible <b>PEA</b></span>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="lab">Valeur liquidative</div><div class="val">150,39 €</div><div class="sub">part I EUR · au 31/05/2026</div></div>
+      <div class="kpi"><div class="lab">Performance 2026 (YTD)</div><div class="val pos">+10,52 %</div><div class="sub">indice +8,01 % · écart +2,5 pts</div></div>
+      <div class="kpi"><div class="lab">Actif net du compartiment</div><div class="val">825 M€</div><div class="sub">collecte dynamique sur 12 mois</div></div>
+      <div class="kpi"><div class="lab">Indice de risque</div><div class="val">4 / 7</div><div class="sub">risque moyen · horizon 5 ans min.</div></div>
+    </div>
+    <p class="disc-mini">Communication promotionnelle destinée aux investisseurs professionnels. Données&nbsp;: reporting mensuel CPRAM au 31/05/2026, pitchbook (mai 2026), DIC PRIIPs (publié le 18/12/2025), infographie (28/03/2026)&nbsp;; historique de VL quotidienne du 01/06/2023 au 24/06/2026. Date de création du fonds&nbsp;: 28/03/2023. Les performances passées ne préjugent pas des performances futures.</p>
+  </div>
+</div>
+
+<!-- GRAPHIQUE INTEGRE -->
+<section id="parcours">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">01 · Parcours de la valeur liquidative</div>
+      <h2>La VL depuis la création, expliquée</h2>
+      <p>Valeur liquidative réelle de la part I EUR (indexée en base 100), comparée à son indice de référence MSCI EMU Net Return. Les points numérotés rattachent chaque phase du parcours à un fait documenté (marché, thème, gestion). Survoler un repère pour un aperçu, cliquer pour le détail complet et les sources.</p>
+    </div>
+
+    <div class="panel">
+      <div class="ctrls">
+        <div class="ctrl-group">
+          <div class="glab">Période</div>
+          <div class="btnrow" id="rangeBtns"></div>
+        </div>
+        <div class="ctrl-group">
+          <div class="glab">Zoom sur un épisode</div>
+          <div class="btnrow" id="epBtns"></div>
+        </div>
+      </div>
+
+      <div class="ctrl-group" style="margin-top:16px">
+        <div class="glab">Courbes (cliquer pour afficher / masquer)</div>
+        <div class="btnrow" id="seriesBtns"></div>
+      </div>
+
+      <div class="chartwrap">
+        <svg id="chart" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div class="tip" id="tip"></div>
+        <div class="evttip" id="evtTip"></div>
+      </div>
+
+      <div class="livelegend" id="liveLegend" style="margin-top:14px"></div>
+
+      <div class="chart-foot">
+        <div class="base" id="baseNote"></div>
+        <div class="hint">Molette&nbsp;: zoom &nbsp;·&nbsp; glisser&nbsp;: déplacer &nbsp;·&nbsp; double-clic&nbsp;: réinitialiser</div>
+      </div>
+      <div class="chart-foot" style="padding-top:0">
+        <div class="hint">Repères&nbsp;: <span style="color:#001C4B;font-weight:700">Macro / marché</span> · <span style="color:#0082b8;font-weight:700">Thème / secteur</span> · <span style="color:#9a6a00;font-weight:700">Gestion / fonds</span>. Cliquer un numéro pour le détail et les sources.</div>
+        <div>Sources&nbsp;: export VL CPRAM part I EUR (LU2570611249) du 01/06/2023 au 24/06/2026&nbsp;; série de l'indice MSCI EMU Net Return (base 100 au 28/03/2023). Repères&nbsp;: pitchbook, reporting mensuel, communication du gérant.</div>
+      </div>
+    </div>
+    <p class="srcline">VL réelle de la part I EUR indexée en base 100 à l'ouverture de la fenêtre affichée&nbsp;; performances nettes de frais. Sur longue période, le fonds reste en léger retrait de son indice (écart d'environ -1,3 pt/an depuis la création)&nbsp;; il reprend l'avantage en 2026 (YTD +10,52 % contre +8,01 %). Source&nbsp;: reporting mensuel CPRAM au 31/05/2026.</p>
+  </div>
+</section>
+
+<!-- EN BREF -->
+<section class="alt" id="enbref">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">02 · L'essentiel</div>
+      <h2>Le fonds en bref</h2>
+      <p>CPR Invest - European Strategic Autonomy est un fonds d'actions principalement de la zone euro, géré activement, investi sur le thème de l'autonomie stratégique de l'Europe. Une approche sélective et granulaire qui ne retient que les activités et secteurs contribuant à la résilience stratégique de l'Europe.</p>
+    </div>
+
+    <div class="grid3">
+      <div class="card">
+        <div class="dimhead"><div class="dimnum" style="background:var(--navy)">A</div><h3>Pourquoi ce fonds&nbsp;?</h3></div>
+        <p><b>Une réponse aux fragilités de l'Europe</b>&nbsp;: les événements récents (Covid, guerre en Ukraine, crise énergétique, géopolitique américaine) ont révélé de fortes dépendances externes dans de nombreux domaines critiques.</p>
+        <p><b>Une approche sélective et granulaire</b> qui ne prend en compte que les activités et secteurs contribuant à la résilience stratégique de l'Europe.</p>
+      </div>
+      <div class="card">
+        <div class="dimhead"><div class="dimnum" style="background:var(--cyan)">B</div><h3>Pourquoi maintenant&nbsp;?</h3></div>
+        <p><b>Un changement de paradigme</b> en Europe avec la géopolitique de l'administration Trump&nbsp;: hausse des dépenses de défense, plan de dépenses allemand, volonté de réindustrialiser.</p>
+        <p><b>De nombreux plans de soutien</b> au niveau européen (REARM Europe, Chips Act, Net-Zero Industry Act, Green Deal) qui financent durablement la thématique.</p>
+      </div>
+      <div class="card">
+        <div class="dimhead"><div class="dimnum" style="background:#5a6b85">C</div><h3>Pourquoi CPRAM&nbsp;?</h3></div>
+        <p><b>Un pionnier de l'investissement thématique</b>&nbsp;: une gamme qui s'appuie sur 14 stratégies pour répondre aux enjeux de demain, avec plus de 15 ans de track-record.</p>
+        <p><b>Une équipe expérimentée</b> de plus de 20 gérants et analystes actions dédiés, adossée au leader européen de la gestion d'actifs (groupe Amundi).</p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:22px">
+      <p><b>Objectif d'investissement</b>&nbsp;: surperformer les marchés d'actions européens sur la période de détention recommandée (au moins cinq ans) en investissant dans des actions impliquées dans des secteurs stratégiques qui contribuent à l'autonomie et à la résilience de l'Europe, tout en intégrant des critères ESG dans le processus d'investissement.</p>
+    </div>
+    <p class="srcline">Source&nbsp;: pitchbook CPR Invest - European Strategic Autonomy (sections «&nbsp;Pourquoi ce fonds / maintenant / CPRAM&nbsp;»), mai 2026&nbsp;; objectif d'investissement issu du DIC PRIIPs (publié le 18/12/2025) et du reporting mensuel (31/05/2026).</p>
+  </div>
+</section>
+
+<!-- CARTE D'IDENTITE + RISQUE + FRAIS -->
+<section id="carte">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">03 · Carte d'identité</div>
+      <h2>Caractéristiques &amp; coûts</h2>
+      <p>Repères à connaître pour le dossier. En cas d'écart, les documents légaux (Prospectus, DIC PRIIPs) et la fiche produit officielle font foi.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>Carte d'identité</h3>
+        <table class="idtable" style="margin-top:8px">
+          <tr><td>Code ISIN (part I EUR)</td><td>LU2570611249</td></tr>
+          <tr><td>Code Bloomberg</td><td>CPEUSTI LX</td></tr>
+          <tr><td>Date de création</td><td>28/03/2023</td></tr>
+          <tr><td>Forme juridique</td><td>Compartiment de SICAV luxembourgeoise · OPCVM</td></tr>
+          <tr><td>Société de gestion</td><td>CPR Asset Management (groupe Amundi)</td></tr>
+          <tr><td>Devise de la part</td><td>EUR · capitalisation</td></tr>
+          <tr><td>Indice de référence</td><td class="lng">MSCI EMU Net Return</td></tr>
+          <tr><td>Classification SFDR</td><td>Article 8</td></tr>
+          <tr><td>Exposition actions</td><td>75 % à 120 % de l'actif</td></tr>
+          <tr><td>Éligibilité PEA</td><td>Oui (min. 75 % UE / EEE)</td></tr>
+          <tr><td>Horizon recommandé</td><td>5 ans minimum</td></tr>
+          <tr><td>Dépositaire / valorisateur</td><td>CACEIS Bank, succursale de Luxembourg</td></tr>
+        </table>
+        <p class="srcline">Source&nbsp;: reporting mensuel CPR Invest - ESA (31/05/2026) et DIC PRIIPs (publié le 18/12/2025).</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div class="card">
+          <h3>Indicateur de risque (PRIIPs)</h3>
+          <div class="ph">Échelle de 1 (plus faible) à 7 (plus élevé)</div>
+          <div class="risk">
+            <div class="rb">1</div><div class="rb">2</div><div class="rb">3</div>
+            <div class="rb on">4</div><div class="rb">5</div><div class="rb">6</div><div class="rb">7</div>
+          </div>
+          <p style="font-size:13px;color:var(--muted);margin:10px 0 0">Classe de risque <b>moyenne</b> (4/7). Le fonds présente un risque de perte en capital&nbsp;; il ne prévoit aucune protection contre les aléas de marché. Le risque de liquidité du marché peut accentuer la variation des performances.</p>
+          <p class="srcline">Source&nbsp;: DIC PRIIPs CPR Invest - ESA, publié le 18/12/2025.</p>
+        </div>
+        <div class="card">
+          <h3>Coûts (part I EUR)</h3>
+          <table class="idtable" style="margin-top:4px">
+            <tr><td>Frais de gestion &amp; autres frais</td><td>0,96 % / an</td></tr>
+            <tr><td>Coûts de transaction</td><td>0,24 % / an</td></tr>
+            <tr><td>Commission de surperformance</td><td class="lng">15 % de la surperformance au-delà du MSCI EMU NR (méthodologie AEMF)</td></tr>
+            <tr><td>Coûts d'entrée (max.)</td><td>jusqu'à 5,00 %</td></tr>
+            <tr><td>Coûts de sortie</td><td>néant</td></tr>
+          </table>
+          <p class="note" style="margin-top:10px">La commission de surperformance est due dès lors que le fonds surperforme son indice, y compris si sa performance absolue est négative&nbsp;; les sous-performances des 5 dernières années doivent toutefois être compensées au préalable.</p>
+          <p class="srcline">Source&nbsp;: DIC PRIIPs CPR Invest - ESA (part I EUR), publié le 18/12/2025.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RAISONS D'INVESTIR -->
+<section class="alt" id="raisons">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">04 · Arguments clés</div>
+      <h2>Cinq raisons d'investir</h2>
+      <p>Synthèse des arguments structurants tels que présentés dans les supports officiels CPR Invest - European Strategic Autonomy.</p>
+    </div>
+    <div class="reasons">
+      <div class="reason"><div class="rn">1</div><div><h4>Un thème d'avenir pour l'Europe, dans un contexte porteur</h4><p>Une stratégie qui accompagne l'Europe dans le renforcement de son autonomie stratégique, alors que les fragilités révélées (santé, défense, énergie, alimentation, industrie) appellent une réponse durable.</p></div></div>
+      <div class="reason"><div class="rn">2</div><div><h4>De nombreux plans de soutien publics</h4><p>La thématique bénéficie d'un soutien budgétaire sans précédent&nbsp;: REARM Europe (~800 Md€), «&nbsp;bazooka&nbsp;» allemand (500 Md€), Chips Act, Net-Zero Industry Act, Green Deal et nouvelle PAC.</p></div></div>
+      <div class="reason"><div class="rn">3</div><div><h4>Une approche sélective et granulaire</h4><p>Un univers à cinq dimensions (industrie, défense, finance, santé, alimentation) qui ne retient que les activités et entreprises les plus stratégiques pour la résilience de l'Europe.</p></div></div>
+      <div class="reason"><div class="rn">4</div><div><h4>Un objectif d'amélioration du profil ESG</h4><p>Classé SFDR Article 8, le fonds vise une note ESG supérieure à celle de son indice de référence et applique des exclusions normatives et sectorielles, y compris sur la défense controversée.</p></div></div>
+      <div class="reason"><div class="rn">5</div><div><h4>Une gestion active de conviction</h4><p>Portefeuille de conviction (≈ 55 valeurs), approche TVT (Thèse / Valorisation / Timing), screening HOLT &amp; FactSet et suivi des risques en synergie avec les analystes d'Amundi.</p></div></div>
+    </div>
+    <p class="srcline">Source&nbsp;: pitchbook CPR Invest - ESA (sections «&nbsp;Pourquoi ce fonds&nbsp;» et «&nbsp;Processus&nbsp;»), mai 2026&nbsp;; nombre de valeurs et coûts&nbsp;: reporting mensuel (31/05/2026).</p>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section id="equipe">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">05 · Équipe de gestion</div>
+      <h2>Qui gère le fonds</h2>
+      <p>Le fonds est géré au sein de l'équipe Actions thématiques de CPRAM. Damien Mariette pilote la thématique Souveraineté européenne, en co-gestion avec Eric Labbé.</p>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>Damien Mariette</h3>
+        <div class="ph">Gérant de portefeuille senior · Actions thématiques (pôle Progress)</div>
+        <p>Rejoint l'équipe Actions thématiques de CPRAM en janvier 2023 pour gérer la thématique Souveraineté européenne. Il débute comme gérant actions européennes en 2008 à la Banque Populaire du Val de France, devient gérant d'actions internationales au Fonds de Garantie Automobiles en 2009, puis gère des actions européennes pour la Financière de l'Échiquier et Sycomore (2012-2018). Master en finance de marché de l'université d'Artois.</p>
+      </div>
+      <div class="card">
+        <h3>Eric Labbé, CFA</h3>
+        <div class="ph">Gérant senior Actions thématiques · membre du pôle PEOPLE</div>
+        <p>Rejoint l'équipe Actions thématiques de CPRAM en 2018. Il gère les thématiques Mid Cap et High Dividend depuis 2013, le thème Vieillissement de la population depuis 2018 et le thème Ambition France depuis 2020, et co-gère les Technologies médicales depuis 2021. Carrière débutée en 1992 (Crédit Lyonnais), puis Crédit Agricole AM en 1997 et CPRAM dès 2001. Master Banque et Finance (Paris II Panthéon-Assas), CFA Charterholder.</p>
+      </div>
+    </div>
+    <p class="note">Source&nbsp;: pitchbook CPR Invest - ESA (mai 2026) et reporting mensuel (équipe de gestion). Rien ne garantit que les professionnels actuellement employés par CPRAM continueront à l'être&nbsp;; les performances ou succès passés ne préjugent pas des résultats futurs.</p>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section class="alt" id="suite">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:16px"><h2 style="font-size:22px">Poursuivre la lecture</h2></div>
+    <div class="nextnav">
+      <a href="theme.html"><div class="nl">Page suivante</div><div class="nt">Le thème</div></a>
+      <a href="enjeux.html"><div class="nl">Aller à</div><div class="nt">Enjeux &amp; catalyseurs</div></a>
+      <a href="strategie.html"><div class="nl">Aller à</div><div class="nt">Stratégie &amp; processus</div></a>
+      <a href="portefeuille.html"><div class="nl">Aller à</div><div class="nt">Portefeuille &amp; performance</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>CPR Asset Management</h4>
+        <p>91-93, boulevard Pasteur · 75015 Paris<br>Groupe Amundi · SGP agréée par l'AMF n° GP01-056.</p>
+        <p style="margin-top:10px"><a href="https://cpram.com/lux/fr/institutionnels/products/LU2570611249">Fiche produit officielle &amp; documentation →</a></p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <nav>
+          <a href="index.html">Le fonds</a>
+          <a href="theme.html">Le thème</a>
+          <a href="enjeux.html">Enjeux &amp; catalyseurs</a>
+          <a href="strategie.html">Stratégie &amp; processus</a>
+          <a href="portefeuille.html">Portefeuille &amp; performance</a>
+          <a href="concurrence.html">Concurrence</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Sources</h4>
+        <p>Pitchbook CPR Invest - ESA (mai 2026), reporting mensuel (31/05/2026), DIC PRIIPs (18/12/2025), infographie (28/03/2026), communication du gérant, prospectus, export VL CPRAM &amp; séries de VL des fonds comparés.</p>
+      </div>
+    </div>
+    <p class="disc">Communication promotionnelle destinée exclusivement aux investisseurs professionnels au sens de la directive MIF. Document de travail à usage interne. Il est fourni à titre d'information et ne constitue ni un conseil en investissement, ni une recommandation, ni une sollicitation d'achat ou de vente. Le fonds présente un risque de perte en capital&nbsp;; sa valeur liquidative peut fluctuer à la hausse comme à la baisse et le capital investi n'est pas garanti. Risques notables&nbsp;: actions / marché (dont petites capitalisations et marchés émergents), liquidité, contrepartie, investissement responsable. Les performances passées ne préjugent pas des performances futures et ne sont pas constantes dans le temps. Avant toute décision, se référer au Prospectus et au DIC PRIIPs disponibles sur cpram.com. En cas d'écart, les documents légaux et la fiche produit officielle font foi.</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBg"></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="mtop">
+    <button class="mclose" id="modalClose" aria-label="Fermer">✕</button>
+    <div class="mdt" id="mDate"></div>
+    <h3 id="mTitle"></h3>
+  </div>
+  <div class="mbody" id="mBody"></div>
+  <div class="impact" id="mImpact"></div>
+  <div class="sources" id="mSources"></div>
+</div>
+
+<script>
+window.CHART_CONFIG = {
+  present: {cpram:true, bench:true},
+  events: true, episodes: true, fundArea: true,
+  ranges: ["hist","3a","1a","ytd"], defaultRange: "hist"
+};
+</script>
+<script src="data.js"></script>
+<script src="chart.js"></script>
+</body>
+</html>
