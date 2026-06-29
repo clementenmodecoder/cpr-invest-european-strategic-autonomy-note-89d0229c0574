@@ -13,10 +13,10 @@
     <a class="brand" href="index.html"><span class="logobox"><img src="cpram-logo.jpg" alt="CPRAM"></span></a>
     <nav>
       <a href="index.html" class="active">Le fonds</a>
+      <a href="portefeuille.html">Portefeuille &amp; performance</a>
       <a href="theme.html">Le thème</a>
       <a href="enjeux.html">Enjeux &amp; catalyseurs</a>
       <a href="strategie.html">Stratégie &amp; processus</a>
-      <a href="portefeuille.html">Portefeuille &amp; performance</a>
       <a href="concurrence.html">Concurrence</a>
     </nav>
     <span class="badge-int">Usage interne</span>
@@ -39,7 +39,7 @@
     </div>
 
     <div class="kpis">
-      <div class="kpi"><div class="lab">Valeur liquidative</div><div class="val">150,39 €</div><div class="sub">part I EUR · au 31/05/2026</div></div>
+      <div class="kpi"><div class="lab">Valeur liquidative</div><div class="val">151,72 €</div><div class="sub">part I EUR · au 24/06/2026</div></div>
       <div class="kpi"><div class="lab">Performance 2026 (YTD)</div><div class="val pos">+10,52 %</div><div class="sub">indice +8,01 % · écart +2,5 pts</div></div>
       <div class="kpi"><div class="lab">Actif net du compartiment</div><div class="val">825 M€</div><div class="sub">collecte dynamique sur 12 mois</div></div>
       <div class="kpi"><div class="lab">Indice de risque</div><div class="val">4 / 7</div><div class="sub">risque moyen · horizon 5 ans min.</div></div>
@@ -67,12 +67,14 @@
           <div class="glab">Zoom sur un épisode</div>
           <div class="btnrow" id="epBtns"></div>
         </div>
-        <a class="seemore" href="concurrence.html#graphique" style="margin-left:auto;align-self:center">Voir la concurrence</a>
       </div>
 
-      <div class="ctrl-group" style="margin-top:16px">
-        <div class="glab">Courbes (cliquer pour afficher / masquer)</div>
-        <div class="btnrow" id="seriesBtns"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:16px">
+        <div class="ctrl-group">
+          <div class="glab">Courbes (cliquer pour afficher / masquer)</div>
+          <div class="btnrow" id="seriesBtns"></div>
+        </div>
+        <a class="seemore" id="goCompetition" href="concurrence.html#graphique">Voir la concurrence <span class="ar">&rarr;</span></a>
       </div>
 
       <div class="chartwrap">
@@ -234,10 +236,10 @@
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:16px"><h2 style="font-size:22px">Poursuivre la lecture</h2></div>
     <div class="nextnav">
-      <a href="theme.html"><div class="nl">Page suivante</div><div class="nt">Le thème</div></a>
+      <a href="portefeuille.html"><div class="nl">Page suivante</div><div class="nt">Portefeuille &amp; performance</div></a>
+      <a href="theme.html"><div class="nl">Aller à</div><div class="nt">Le thème</div></a>
       <a href="enjeux.html"><div class="nl">Aller à</div><div class="nt">Enjeux &amp; catalyseurs</div></a>
-      <a href="strategie.html"><div class="nl">Aller à</div><div class="nt">Stratégie &amp; processus</div></a>
-      <a href="portefeuille.html"><div class="nl">Aller à</div><div class="nt">Portefeuille &amp; performance</div></a>
+      <a href="concurrence.html"><div class="nl">Aller à</div><div class="nt">Concurrence</div></a>
     </div>
   </div>
 </section>
@@ -254,10 +256,10 @@
         <h4>Navigation</h4>
         <nav>
           <a href="index.html">Le fonds</a>
+          <a href="portefeuille.html">Portefeuille &amp; performance</a>
           <a href="theme.html">Le thème</a>
           <a href="enjeux.html">Enjeux &amp; catalyseurs</a>
           <a href="strategie.html">Stratégie &amp; processus</a>
-          <a href="portefeuille.html">Portefeuille &amp; performance</a>
           <a href="concurrence.html">Concurrence</a>
         </nav>
       </div>
@@ -292,5 +294,20 @@ window.CHART_CONFIG = {
 </script>
 <script src="data.js"></script>
 <script src="chart.js"></script>
+<script>
+/* Transition "slide" vers la page Concurrence */
+(function(){
+  var btn=document.getElementById("goCompetition");
+  if(!btn) return;
+  btn.addEventListener("click",function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1) return;
+    e.preventDefault();
+    var href=btn.getAttribute("href");
+    try{ sessionStorage.setItem("slideFromChart","1"); }catch(_){}
+    document.body.classList.add("slide-out");
+    setTimeout(function(){ window.location.href=href; }, 320);
+  });
+})();
+</script>
 </body>
 </html>

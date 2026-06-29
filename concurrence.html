@@ -13,10 +13,10 @@
     <a class="brand" href="index.html"><span class="logobox"><img src="cpram-logo.jpg" alt="CPRAM"></span></a>
     <nav>
       <a href="index.html">Le fonds</a>
+      <a href="portefeuille.html">Portefeuille &amp; performance</a>
       <a href="theme.html">Le thème</a>
       <a href="enjeux.html">Enjeux &amp; catalyseurs</a>
       <a href="strategie.html">Stratégie &amp; processus</a>
-      <a href="portefeuille.html">Portefeuille &amp; performance</a>
       <a href="concurrence.html" class="active">Concurrence</a>
     </nav>
     <span class="badge-int">Usage interne</span>
@@ -290,10 +290,10 @@
         <h4>Navigation</h4>
         <nav>
           <a href="index.html">Le fonds</a>
+          <a href="portefeuille.html">Portefeuille &amp; performance</a>
           <a href="theme.html">Le thème</a>
           <a href="enjeux.html">Enjeux &amp; catalyseurs</a>
           <a href="strategie.html">Stratégie &amp; processus</a>
-          <a href="portefeuille.html">Portefeuille &amp; performance</a>
           <a href="concurrence.html">Concurrence</a>
         </nav>
       </div>
@@ -315,5 +315,17 @@ window.CHART_CONFIG = {
 </script>
 <script src="data.js"></script>
 <script src="chart.js"></script>
+<script>
+/* Entree "slide" lorsqu'on arrive depuis le bouton du graphique d'accueil */
+(function(){
+  var fromChart=false;
+  try{ fromChart=sessionStorage.getItem("slideFromChart")==="1"; sessionStorage.removeItem("slideFromChart"); }catch(_){}
+  if(fromChart || location.hash==="#graphique"){
+    document.body.classList.add("slide-in");
+    var g=document.getElementById("graphique");
+    if(g){ setTimeout(function(){ g.scrollIntoView({behavior:"smooth",block:"start"}); }, 70); }
+  }
+})();
+</script>
 </body>
 </html>

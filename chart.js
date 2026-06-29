@@ -78,56 +78,70 @@ const EVENTS = [
   body:`<p>Lancement de <b>CPR Invest - European Strategic Autonomy</b> (part I EUR, capitalisation), compartiment de la SICAV luxembourgeoise CPR Invest, geree par CPR Asset Management (groupe Amundi). Date de creation officielle : <b>28/03/2023</b> ; ISIN LU2570611249 ; indice de reference le <b>MSCI EMU Net Return</b>.</p><p>Le fonds vise a surperformer les marches actions de la zone euro sur un horizon d'au moins cinq ans, en investissant dans des societes qui contribuent a l'autonomie et a la resilience strategiques de l'Europe (industrie, defense, finance, sante, alimentation), tout en integrant des criteres ESG (SFDR article 8). La gestion, de conviction, est assuree par Damien Mariette et Eric Labbe.</p><p>La courbe reprend la valeur liquidative reelle de la part I EUR, indexee en base 100 a l'ouverture de la fenetre affichee. L'historique de VL fourni demarre au 01/06/2023.</p>`,
   sources:[{l:"Reporting mensuel CPR Invest - ESA (31/05/2026)"},{l:"DIC PRIIPs CPR Invest - ESA (publie le 18/12/2025)"},{l:"Page produit officielle", u:"https://cpram.com/lux/fr/institutionnels/products/LU2570611249"}] },
 
-{ id:2, date:"2024-11-05", cat:"macro", title:"Reelection de Donald Trump",
+{ id:2, date:"2023-10-31", cat:"macro", title:"Point bas d'octobre 2023, debut du cycle haussier",
+  short:"La VL touche son plus-bas historique (97,63) fin octobre 2023, juste avant un puissant rebond.",
+  move:"plus-bas historique le 31/10/2023 a 97,63, puis bascule en cycle haussier", moveSign:1,
+  holdings:"Repli generalise des actions de la zone euro avant le rebond de fin 2023.",
+  body:`<p>Fin octobre 2023, la valeur liquidative touche son <b>plus-bas historique, a 97,63 le 31/10/2023</b>. Ce creux coincide avec le pic des taux d'interet a long terme (le rendement du 10 ans americain frole alors les 5 %), particulierement penalisant pour les actions.</p><p>A partir de debut novembre 2023, le reflux de l'inflation et les anticipations de baisses de taux des banques centrales (BCE et Fed au sommet de leur cycle) declenchent un puissant rebond. Le fonds ne reviendra jamais sur ce point bas : c'est le veritable point de depart de son cycle haussier.</p>`,
+  sources:[{l:"Export VL CPRAM (LU2570611249), plus-bas au 31/10/2023"},{l:"Contexte de marche : pic des taux longs fin octobre 2023 et anticipations de pivot des banques centrales"}] },
+
+{ id:3, date:"2024-11-05", cat:"macro", title:"Reelection de Donald Trump",
   short:"Bascule geopolitique : pression accrue sur l'Europe (defense, OTAN, droits de douane) ; catalyseur du theme de l'autonomie.",
   move:"acceleration structurelle de la thematique de souverainete", moveSign:1,
   holdings:"Dimensions defense et industrie au premier plan.",
   body:`<p>La communication du gerant souligne que «&nbsp;nous naviguons dans un environnement volatil depuis la reelection de Trump&nbsp;». L'administration americaine accroit les pressions geopolitiques sur l'Union europeenne : gel de l'aide militaire a l'Ukraine, remise en cause de l'alliance de defense transatlantique et de l'OTAN, droits de douane.</p><p>Pour la gestion, ce changement de paradigme constitue un puissant catalyseur structurel : les Europeens «&nbsp;n'ont plus d'autre choix que d'agir en coordination&nbsp;» pour se reindustrialiser et se rearmer, les deux moteurs au coeur de la these du fonds.</p>`,
   sources:[{l:"Communication du gerant - ESA (verbatim)"},{l:"Pitchbook CPR Invest - ESA (mai 2026), enjeux & opportunites"}] },
 
-{ id:3, date:"2025-02-14", cat:"macro", title:"Discours de J.D. Vance a Munich",
+{ id:4, date:"2025-02-14", cat:"macro", title:"Discours de J.D. Vance a Munich",
   short:"A la Conference de Munich sur la securite, le vice-president americain remet en cause l'alliance transatlantique.",
   move:"prise de conscience europeenne acceleree", moveSign:1,
   holdings:"Renforcement de la these defense / autonomie.",
   body:`<p>La communication du gerant cite explicitement «&nbsp;le discours du vice-president J.D. Vance a la Conference de Munich sur la securite&nbsp;», qui «&nbsp;a mis la pression sur tous les pays europeens pour qu'ils protegent notre zone&nbsp;».</p><p>Ce moment marque, pour la gestion, le point ou «&nbsp;l'autonomie strategique europeenne est plus importante que jamais&nbsp;», preparant la salve d'annonces budgetaires de mars 2025.</p>`,
   sources:[{l:"Communication du gerant - ESA (verbatim)"}] },
 
-{ id:4, date:"2025-03-04", cat:"secteur", title:"REARM Europe / Readiness 2030",
+{ id:5, date:"2025-03-04", cat:"secteur", title:"REARM Europe / Readiness 2030",
   short:"La Commission europeenne devoile un plan pouvant mobiliser jusqu'a 800 Md€ pour la defense.",
   move:"catalyseur majeur pour la dimension defense", moveSign:1,
   holdings:"Valeurs defense et industrie de l'univers (ex. : Thales, Safran, Airbus, Exosens).",
   body:`<p>Debut mars 2025, la Commission europeenne annonce le plan <b>«&nbsp;REARM Europe / Readiness 2030&nbsp;»</b> : un potentiel de <b>~800 Md€</b> de depenses de defense (~650 Md€ de marge budgetaire supplementaire sur quatre ans et ~150 Md€ de prets de l'UE aux Etats membres). L'objectif affiche est de doubler le budget de defense des Etats membres d'ici 2030 et de tendre vers 3 % du PIB.</p><p>Le pitchbook presente ce plan comme l'un des catalyseurs structurels de 2026, dans le prolongement d'un sous-investissement europeen estime a <b>1 800 Md€</b> depuis la fin de la guerre froide.</p>`,
   sources:[{l:"Pitchbook CPR Invest - ESA (mai 2026), «&nbsp;REARM Europe / Readiness 2030&nbsp;»"},{l:"Communication du gerant - ESA"}] },
 
-{ id:5, date:"2025-03-18", cat:"macro", title:"Le «&nbsp;bazooka&nbsp;» budgetaire allemand",
+{ id:6, date:"2025-03-18", cat:"macro", title:"Le «&nbsp;bazooka&nbsp;» budgetaire allemand",
   short:"L'Allemagne cree un fonds special d'infrastructure de 500 Md€ et assouplit son frein a l'endettement.",
   move:"soutien massif a la croissance et a la reindustrialisation", moveSign:1,
   holdings:"Industrie, construction, energie (ex. : Siemens, Saint-Gobain, Schneider Electric).",
   body:`<p>Le pitchbook detaille la creation d'un <b>fonds d'infrastructure hors budget de 500 Md€</b> (environ 11,6 % du PIB allemand 2024) sur dix ans, couvrant l'education, le transport, la decarbonation, le logement et la resilience economique. L'estimation moyenne est une hausse du PIB allemand d'environ 1,5 point sur trois ans, avec un effet d'entrainement attendu sur l'ensemble de la croissance europeenne.</p><p>Conjugue a REARM Europe, ce «&nbsp;bazooka&nbsp;» marque un veritable changement de paradigme budgetaire pour le coeur industriel de la zone euro.</p>`,
   sources:[{l:"Pitchbook CPR Invest - ESA (mai 2026), «&nbsp;Le bazooka allemand&nbsp;» (au 28/03/2025)"}] },
 
-{ id:6, date:"2025-04-02", cat:"macro", title:"Tensions tarifaires americaines",
-  short:"L'annonce de droits de douane americains declenche un repli marque des marches actions.",
-  move:"repli temporaire des marches actions de la zone euro", moveSign:-1,
-  holdings:"Repli generalise ; valeurs cycliques et exportatrices sous pression.",
-  body:`<p>La communication du gerant mentionne, parmi les pressions exercees par l'administration americaine, les <b>droits de douane</b>. Leur annonce au printemps 2025 provoque un episode d'aversion au risque et un repli des marches actions, visible sur le parcours de la valeur liquidative.</p><p>La gestion analyse toutefois ces tensions comme un accelerateur de la prise de conscience europeenne, renforcant la necessite d'une autonomie industrielle et strategique.</p>`,
-  sources:[{l:"Communication du gerant - ESA"}] },
+{ id:7, date:"2025-04-07", cat:"macro", title:"Flash crash des droits de douane (« Liberation Day »)",
+  short:"Annonce des droits de douane « reciproques » americains le 2 avril : chute brutale des marches du 3 au 9 avril.",
+  move:"VL d'environ 126 (18/03) a 106,44 (09/04), soit environ -15,7 %", moveSign:-1,
+  holdings:"Repli general ; valeurs cycliques, industrielles et exportatrices fortement touchees.",
+  body:`<p>Le 2 avril 2025 («&nbsp;Liberation Day&nbsp;»), l'administration americaine annonce des droits de douane «&nbsp;reciproques&nbsp;» d'une ampleur inattendue. Les marches actions mondiaux plongent du <b>3 au 9 avril</b>, l'un des reculs les plus brutaux depuis 2020. La valeur liquidative du fonds chute d'environ <b>126 (plus-haut du 18/03) a 106,44 le 09/04</b>, soit pres de -15,7 %.</p><p>Le rebond est tout aussi rapide a partir du 10 avril, apres l'annonce d'une <b>pause de 90 jours</b> sur la plupart des droits de douane. La communication du gerant cite d'ailleurs les «&nbsp;tarifs douaniers&nbsp;» parmi les pressions exercees par Washington sur l'Europe.</p>`,
+  sources:[{l:"Communication du gerant - ESA (droits de douane)"},{l:"Export VL CPRAM (LU2570611249)"},{l:"Contexte de marche : droits de douane reciproques du 02/04/2025 et pause de 90 jours du 09/04/2025"}] },
 
-{ id:7, date:"2025-12-31", cat:"fonds", title:"2025 : une annee solide (+23,5 %)",
+{ id:8, date:"2025-12-31", cat:"fonds", title:"2025 : une annee solide (+23,5 %)",
   short:"Le fonds termine 2025 a +23,5 %, au coude-a-coude avec son indice (+23,7 %).",
   move:"2025 : +23,5 % (indice +23,7 %, ecart -0,2 pt)", moveSign:1,
   holdings:"Forte contribution de l'industrie, de la finance et des semi-conducteurs.",
   body:`<p>Portee par le reveil budgetaire europeen et la dynamique des valeurs industrielles et financieres, l'annee 2025 se solde par une performance de <b>+23,5 %</b> pour le fonds, quasiment en ligne avec son indice MSCI EMU (<b>+23,7 %</b>, ecart de -0,2 point).</p><p>Ce millesime contraste avec 2024 (+3,7 % contre +9,5 % pour l'indice), annee ou la dimension defense et plusieurs valeurs n'avaient pas encore ete pleinement reconnues par le marche.</p>`,
   sources:[{l:"Reporting mensuel CPR Invest - ESA (performances par annee civile)"}] },
 
-{ id:8, date:"2026-05-15", cat:"secteur", title:"Rotation 2026 : tech & aeronautique",
+{ id:9, date:"2026-02-28", cat:"macro", title:"Crash de fin fevrier 2026 : choc petrolier",
+  short:"Conflit americano-iranien et fermeture du detroit d'Ormuz : flambee du petrole et repli des actions.",
+  move:"VL d'environ 147 (25/02) a 135,68 (09/03), soit environ -7,8 %", moveSign:-1,
+  holdings:"Repli general ; pressions inflationnistes via l'energie ; valeurs sensibles aux taux penalisees.",
+  body:`<p>Fin fevrier 2026, l'escalade au Moyen-Orient provoque un nouveau choc : les Etats-Unis lancent des operations militaires contre l'Iran (autour du 28/02/2026), qui riposte en fermant le <b>detroit d'Ormuz</b> (environ 20 % du petrole mondial transite par ce point). Le prix du brut s'envole (le WTI passe d'environ 67 $ le 27/02 a plus de 110 $ debut mars, frolant brievement 120 $), ravivant les craintes d'inflation et de stagflation.</p><p>Dans ce contexte de repli, la valeur liquidative recule d'environ <b>147 (plus-haut du 25/02) a 135,68 le 09/03</b>, soit pres de -7,8 %. C'est precisement ce choc dont le commentaire de gestion de mai 2026 soulignera ensuite l'«&nbsp;apaisement&nbsp;» et la «&nbsp;reouverture du detroit d'Ormuz&nbsp;», a l'origine du rebond du printemps.</p>`,
+  sources:[{l:"Reporting mensuel CPR Invest - ESA (commentaire de mai 2026, detroit d'Ormuz)"},{l:"Export VL CPRAM (LU2570611249)"},{l:"Recherche de marche : conflit USA-Iran et fermeture du detroit d'Ormuz (fin fevrier 2026)", u:"https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"}] },
+
+{ id:10, date:"2026-05-15", cat:"secteur", title:"Rotation 2026 : tech & aeronautique",
   short:"Desescalade au Moyen-Orient : rebond de la tech et de l'aeronautique ; le secteur de la defense marque une pause.",
   move:"mai 2026 : fonds +5,28 % (indice +4,13 %)", moveSign:1,
   holdings:"Infineon +42 %, ASML +13 %, Safran +13 %, Rolls-Royce +13 % ; defense en repli.",
   body:`<p>Le commentaire de gestion de mai 2026 decrit un marche porte par «&nbsp;l'apaisement des tensions au Moyen-Orient&nbsp;» et la reouverture du detroit d'Ormuz. Les valeurs petrolieres refluent, l'aeronautique civile rebondit (<b>Safran +13,25 %</b>, Rolls-Royce +12,83 %) et la technologie poursuit son ascension (<b>Infineon +41,97 %</b>, ASML +13,29 %).</p><p>A l'inverse, «&nbsp;le secteur de la defense continue de souffrir&nbsp;», penalise par des sujets d'execution et par les craintes d'une reduction des depenses. La gestion en profite pour <b>renforcer les valeurs de defense</b> et des secteurs delaisses (construction avec Saint-Gobain, sante avec Merck, BioMerieux, Sanofi).</p>`,
   sources:[{l:"Reporting mensuel CPR Invest - ESA, commentaire de gestion (mai 2026)"}] },
 
-{ id:9, date:"2026-05-31", cat:"fonds", title:"Le fonds reprend l'avantage en 2026",
+{ id:11, date:"2026-05-31", cat:"fonds", title:"Le fonds reprend l'avantage en 2026",
   short:"Au 31/05/2026, le fonds surperforme son indice depuis le debut d'annee : +10,52 % contre +8,01 %.",
   move:"YTD 2026 : +10,52 % (indice +8,01 %, ecart +2,51 pts)", moveSign:1,
   holdings:"Selection de titres et allocation favorables en 2026.",
@@ -399,6 +413,7 @@ if(svg){
 
   svg.addEventListener("pointerdown",function(e){
     if(!CUR) return;
+    if(e.target.closest && e.target.closest(".evt-marker")) return; // laisser le clic ouvrir le repere (pas de pan)
     const rect=svg.getBoundingClientRect(), scale=CUR.W/rect.width;
     const x=(e.clientX-rect.left)*scale;
     if(x<CUR.L||x>CUR.L+CUR.pw) return;
